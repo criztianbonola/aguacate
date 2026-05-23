@@ -37,6 +37,31 @@
             box-shadow: 0 4px 18px rgba(0, 0, 0, .15);
         }
 
+        .institutional-strip {
+            background: white;
+            padding: 8px 12px;
+            display: grid;
+            grid-template-columns: 62px minmax(0, 1fr) 62px;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #e6edf3;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .institutional-strip .header-logo {
+            width: 100%;
+            max-height: 64px;
+            object-fit: contain;
+            min-width: 0;
+        }
+
+        .institutional-strip .career-logo {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
         header h1 {
             font-size: 22px;
         }
@@ -203,13 +228,68 @@
             color: #566675;
         }
 
-        .beneficios,
-        .costos {
+        .beneficios {
             background: #ffffff;
         }
 
         .funcionamiento {
             background: #eaf7fb;
+        }
+
+        .galeria {
+            background: #ffffff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 22px;
+            margin-top: 30px;
+            align-items: stretch;
+        }
+
+        .gallery-feature,
+        .gallery-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e6edf3;
+            box-shadow: 0 10px 28px rgba(35, 50, 65, .09);
+        }
+
+        .gallery-feature img,
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-feature {
+            min-height: 520px;
+        }
+
+        .gallery-side {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .gallery-card {
+            min-height: 245px;
+            position: relative;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 14px 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .72));
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
         }
 
         .objetivos {
@@ -233,35 +313,40 @@
             color: #d7e3ec;
         }
 
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
-            margin-top: 28px;
+        .team {
+            background: #f6f8fb;
         }
 
-        .price-card {
-            background: #f0fbfd;
-            border: 1px solid #cceff5;
-            border-radius: 8px;
-            padding: 24px;
+        .team-card {
+            min-height: 170px;
         }
 
-        .price-card h3 {
-            color: #1f2933;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        .price-card strong {
-            display: block;
+        .team-card small {
+            display: inline-block;
             color: #00a6c8;
-            font-size: 26px;
-            margin: 8px 0;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: .6px;
         }
 
-        .price-card p {
-            color: #526170;
+        .logo-band {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .logo-band img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 10px 28px rgba(35, 50, 65, .09);
         }
 
         table {
@@ -323,6 +408,21 @@
                 padding: 20px 6%;
             }
 
+            .institutional-strip {
+                grid-template-columns: 42px minmax(0, 1fr) 42px;
+                padding: 8px 8px;
+                gap: 8px;
+            }
+
+            .institutional-strip .header-logo {
+                max-height: 42px;
+            }
+
+            .institutional-strip .career-logo {
+                width: 42px;
+                height: 42px;
+            }
+
             section,
             .hero {
                 padding-left: 6%;
@@ -333,6 +433,22 @@
                 min-height: 500px;
             }
 
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-feature {
+                min-height: 420px;
+            }
+
+            .gallery-side {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card {
+                min-height: 300px;
+            }
+
             table {
                 display: block;
                 overflow-x: auto;
@@ -341,6 +457,12 @@
     </style>
 </head>
 <body>
+
+    <div class="institutional-strip">
+        <img class="career-logo" src="assets/industrial.png" alt="Logo de Ingeniería Industrial">
+        <img class="header-logo" src="assets/header-institucional.jpg" alt="Logotipos institucionales de Educación, TecNM e ITSSAT">
+        <img class="career-logo" src="assets/mecatronica.png" alt="Logo de Ingeniería Mecatrónica">
+    </div>
 
     <header>
         <div>
@@ -353,7 +475,8 @@
             <a href="#objetivos">Objetivos</a>
             <a href="#beneficios">Beneficios</a>
             <a href="#funcionamiento">Funcionamiento</a>
-            <a href="#costos">Costos</a>
+            <a href="#galeria">Galería</a>
+            <a href="#equipo">Equipo</a>
             <a href="#conclusion">Conclusión</a>
         </nav>
     </header>
@@ -369,9 +492,9 @@
 
             <div class="hero-actions">
                 <button onclick="mostrarMensaje()">Ver información</button>
-                <a class="link-button secondary-button" href="#costos">Ver costos</a>
                 <div id="mensaje"></div>
             </div>
+
         </div>
     </section>
 
@@ -458,39 +581,56 @@
     <section class="beneficios" id="beneficios">
         <div class="section-title">
             <span>Beneficios</span>
-            <h2>Ventajas del dispensador</h2>
+            <h2>Beneficios de FREED TIME</h2>
+            <p>
+                De acuerdo con el tríptico del proyecto, el prototipo aporta ventajas
+                prácticas para el cuidado diario de las mascotas.
+            </p>
         </div>
 
         <div class="card-container">
             <div class="card">
-                <h3>Alimentación programada</h3>
+                <h3>Alimentación a tiempo</h3>
                 <p>
-                    Permite establecer horarios automatizados para apoyar la alimentación
-                    de la mascota cuando el dueño no puede hacerlo en el momento exacto.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Mayor comodidad</h3>
-                <p>
-                    Reduce la preocupación de alimentar manualmente a la mascota todos
-                    los días a la misma hora.
+                    Ayuda a que la mascota reciba alimento en los horarios establecidos.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Control de porciones</h3>
                 <p>
-                    Evita servir comida en exceso y ayuda a mantener una dieta más
-                    balanceada.
+                    Permite suministrar cantidades más controladas de alimento.
                 </p>
             </div>
 
             <div class="card">
-                <h3>Uso de tecnología</h3>
+                <h3>Evita sobrealimentación</h3>
                 <p>
-                    Integra sensores, motor y microcontrolador para resolver una necesidad
-                    cotidiana de forma inteligente.
+                    Reduce el riesgo de servir alimento en exceso y favorece una rutina
+                    más ordenada.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ahorra tiempo al dueño</h3>
+                <p>
+                    Facilita el cuidado diario cuando el usuario tiene horarios ocupados.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Mejora el bienestar</h3>
+                <p>
+                    Contribuye a que la mascota mantenga una alimentación constante y
+                    adecuada.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Fácil de usar</h3>
+                <p>
+                    Integra botones de control y pantalla para que la configuración sea
+                    más clara para el usuario.
                 </p>
             </div>
         </div>
@@ -540,183 +680,101 @@
         </div>
     </section>
 
-    <section class="costos" id="costos">
+    <section class="galeria" id="galeria">
         <div class="section-title">
-            <span>Costos</span>
-            <h2>Costos reales del prototipo</h2>
+            <span>Galería</span>
+            <h2>Proceso y prototipo</h2>
             <p>
-                Para la elaboración del prototipo del dispensador automatizado de
-                alimentos con Arduino, se utilizaron materiales para la estructura física,
-                el sistema mecánico y el sistema electrónico.
+                Estas imágenes muestran la construcción física, el mecanismo interno y
+                la parte electrónica de FREED TIME durante el desarrollo del proyecto.
             </p>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Material</th>
-                    <th>Categoría</th>
-                    <th>Costo real</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Madera para la estructura del prototipo</td>
-                    <td>Estructura física</td>
-                    <td>$550 MXN</td>
-                </tr>
-                <tr>
-                    <td>Tornillos para madera</td>
-                    <td>Estructura física</td>
-                    <td>$39 MXN</td>
-                </tr>
-                <tr>
-                    <td>Bisagras</td>
-                    <td>Estructura física</td>
-                    <td>$20 MXN</td>
-                </tr>
-                <tr>
-                    <td>Pintura acrílica</td>
-                    <td>Acabado</td>
-                    <td>$130 MXN</td>
-                </tr>
-                <tr>
-                    <td>Sellador acrílico en aerosol</td>
-                    <td>Acabado</td>
-                    <td>$95 MXN</td>
-                </tr>
-                <tr>
-                    <td>Pinceles y brocha</td>
-                    <td>Herramientas</td>
-                    <td>$40 MXN</td>
-                </tr>
-                <tr>
-                    <td>Motorreductor Tipo Pololu 3 RPM 12V Motor DC Robot Sumo Gusa</td>
-                    <td>Sistema mecánico</td>
-                    <td>$300 MXN</td>
-                </tr>
-                <tr>
-                    <td>Barra eje metálico</td>
-                    <td>Sistema mecánico</td>
-                    <td>$35 MXN</td>
-                </tr>
-                <tr>
-                    <td>Acoplamiento de brida eje guía de motor</td>
-                    <td>Sistema mecánico</td>
-                    <td>$78 MXN</td>
-                </tr>
-                <tr>
-                    <td>Arduino UNO</td>
-                    <td>Sistema electrónico</td>
-                    <td>$150 MXN</td>
-                </tr>
-                <tr>
-                    <td>Pantalla LCD 16x2</td>
-                    <td>Sistema electrónico</td>
-                    <td>$65 MXN</td>
-                </tr>
-                <tr>
-                    <td>Módulo relay</td>
-                    <td>Sistema electrónico</td>
-                    <td>$59 MXN</td>
-                </tr>
-                <tr>
-                    <td>Fuente de alimentación 12V</td>
-                    <td>Sistema electrónico</td>
-                    <td>$125 MXN</td>
-                </tr>
-                <tr>
-                    <td>Protoboard</td>
-                    <td>Sistema electrónico</td>
-                    <td>$100 MXN</td>
-                </tr>
-                <tr>
-                    <td>Cables jumper macho macho, macho hembra y hembra hembra</td>
-                    <td>Sistema electrónico</td>
-                    <td>$200 MXN</td>
-                </tr>
-                <tr>
-                    <td>4 botones push buttons</td>
-                    <td>Sistema electrónico</td>
-                    <td>$20 MXN</td>
-                </tr>
-                <tr>
-                    <td>1 sensor infrarrojo IR</td>
-                    <td>Sistema electrónico</td>
-                    <td>$94 MXN</td>
-                </tr>
-                <tr>
-                    <td>10 resistencias</td>
-                    <td>Sistema electrónico</td>
-                    <td>$50 MXN</td>
-                </tr>
-                <tr>
-                    <td>Placa de expansión</td>
-                    <td>Sistema electrónico</td>
-                    <td>$138 MXN</td>
-                </tr>
-                <tr>
-                    <td>Rollo de cable AWG</td>
-                    <td>Sistema electrónico</td>
-                    <td>$150 MXN</td>
-                </tr>
-                <tr>
-                    <td>Diodo LED</td>
-                    <td>Sistema electrónico</td>
-                    <td>$56 MXN</td>
-                </tr>
-                <tr>
-                    <td>Estaño</td>
-                    <td>Herramientas</td>
-                    <td>$100 MXN</td>
-                </tr>
-                <tr>
-                    <td>Cinta aislante</td>
-                    <td>Herramientas</td>
-                    <td>$11 MXN</td>
-                </tr>
-                <tr>
-                    <td>Cinchos</td>
-                    <td>Herramientas</td>
-                    <td>$29 MXN</td>
-                </tr>
-                <tr>
-                    <td>Lijas</td>
-                    <td>Herramientas</td>
-                    <td>$20 MXN</td>
-                </tr>
-                <tr class="total-row">
-                    <td>Total de materiales y herramientas</td>
-                    <td>Inversión del prototipo</td>
-                    <td>$2,654 MXN</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Precio de menudeo</h3>
-                <p>Venta individual con margen de ganancia del 40% al 50%.</p>
-                <strong>$2,800 - $3,000 MXN</strong>
-                <p>Ganancia aproximada por unidad: $800 - $1,000 MXN.</p>
+        <div class="gallery-grid">
+            <div class="gallery-feature">
+                <img src="assets/prototipo-frontal.jpeg" alt="Prototipo FREED TIME con panel frontal, pantalla y botones">
             </div>
 
-            <div class="price-card">
-                <h3>Precio de mayoreo</h3>
-                <p>Venta por volumen aplicando descuento en compras de 10 piezas o más.</p>
-                <strong>$2,300 - $2,500 MXN</strong>
-                <p>Ganancia aproximada por unidad: $300 - $500 MXN.</p>
+            <div class="gallery-side">
+                <div class="gallery-card">
+                    <img src="assets/mecanismo-electronica.jpeg" alt="Mecanismo interno con motor y conexiones electrónicas">
+                    <div class="gallery-caption">Mecanismo y electrónica</div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="assets/arduino-control.jpeg" alt="Arduino UNO conectado a protoboard con botones y resistencias">
+                    <div class="gallery-caption">Control con Arduino</div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="assets/armado-taladro.jpeg" alt="Proceso de armado del prototipo con taladro">
+                    <div class="gallery-caption">Armado de la estructura</div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="assets/panel-botones.jpeg" alt="Panel de madera con botones de colores y espacio para pantalla LCD">
+                    <div class="gallery-caption">Panel de configuración</div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="assets/piezas-madera.jpeg" alt="Piezas de madera cortadas para la estructura del dispensador">
+                    <div class="gallery-caption">Piezas de madera</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="equipo">
+        <div class="section-title">
+            <span>Equipo</span>
+            <h2>Integrantes y asesores</h2>
+            <p>
+                El equipo está conformado por estudiantes que aportan habilidades en
+                diseño, programación, investigación y presentación, con el apoyo de
+                docentes asesores.
+            </p>
+        </div>
+
+        <div class="card-container">
+            <div class="card team-card">
+                <small>Líder del proyecto</small>
+                <h3>Génesis Johanna Chagala Jiménez</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Diseñadora del dispensador</small>
+                <h3>Jessica del Carmen Xala Fiscal</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Programación y electrónica</small>
+                <h3>Carlos Karim Quino Belli</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Investigación y documentación</small>
+                <h3>Cristian de Jesús Bonola Alfonso</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Presentadora</small>
+                <h3>Osiris Monserrat Chontal Obil</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Docente asesor</small>
+                <h3>Bernabe Contretas Contreras</h3>
+            </div>
+
+            <div class="card team-card">
+                <small>Docente asesor</small>
+                <h3>Alejandro Ramirez Vazquez</h3>
             </div>
         </div>
 
-        <div class="highlight">
-            <h3>Inversión del prototipo</h3>
-            <p>
-                El costo total de los materiales y herramientas utilizados para la
-                construcción de FREED TIME asciende a $2,654 MXN, inversión necesaria
-                para el desarrollo del dispensador automatizado de alimentos basado en
-                Arduino.
-            </p>
+        <div class="logo-band">
+            <img src="assets/industrial.png" alt="Ingeniería Industrial">
+            <img src="assets/mecatronica.png" alt="Ingeniería Mecatrónica">
         </div>
     </section>
 
