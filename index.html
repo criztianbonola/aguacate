@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dispensador Automático para Mascotas</title>
+    <title>FREED TIME | Dispensador Automatizado para Mascotas</title>
 
     <style>
         * {
@@ -233,6 +233,37 @@
             color: #d7e3ec;
         }
 
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .price-card {
+            background: #f0fbfd;
+            border: 1px solid #cceff5;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .price-card h3 {
+            color: #1f2933;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .price-card strong {
+            display: block;
+            color: #00a6c8;
+            font-size: 26px;
+            margin: 8px 0;
+        }
+
+        .price-card p {
+            color: #526170;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -313,8 +344,8 @@
 
     <header>
         <div>
-            <h1>Dispensador Automático para Mascotas</h1>
-            <p>Proyecto tecnológico escolar</p>
+            <h1>FREED TIME</h1>
+            <p>Proyecto para InnovaTecNM | Dispensador automatizado para mascotas</p>
         </div>
 
         <nav>
@@ -329,10 +360,11 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Alimentación automática, práctica y segura</h2>
+            <h2>Alimentación automatizada, práctica y supervisada</h2>
             <p>
-                Un dispositivo diseñado para ayudar a alimentar a las mascotas en horarios
-                establecidos, controlando porciones y reduciendo descuidos.
+                FREED TIME es un prototipo diseñado para apoyar la alimentación de las
+                mascotas en horarios establecidos, con control de porciones e intervención
+                humana constante para su programación, revisión y mantenimiento.
             </p>
 
             <div class="hero-actions">
@@ -348,10 +380,10 @@
             <span>Descripción</span>
             <h2>¿En qué consiste el proyecto?</h2>
             <p>
-                El dispensador automático de comida para mascotas es un sistema que libera
-                alimento de forma programada. Está pensado para personas que, por trabajo,
-                escuela u otras actividades, no siempre pueden alimentar a sus mascotas a
-                la misma hora.
+                FREED TIME es un dispensador automatizado de comida para mascotas que
+                libera alimento de forma programada mediante Arduino. Está pensado como
+                una propuesta para InnovaTecNM que combina electrónica, diseño mecánico y
+                supervisión humana para mejorar la rutina de alimentación.
             </p>
         </div>
 
@@ -388,7 +420,8 @@
             <h2>Metas del proyecto</h2>
             <p>
                 El objetivo es crear una solución funcional, económica y fácil de usar que
-                apoye el bienestar de las mascotas.
+                apoye el bienestar de las mascotas sin reemplazar el cuidado responsable
+                de sus dueños.
             </p>
         </div>
 
@@ -396,8 +429,9 @@
             <div class="card">
                 <h3>Objetivo general</h3>
                 <p>
-                    Diseñar un dispensador automático capaz de suministrar comida en
-                    horarios programados y en cantidades controladas.
+                    Diseñar un dispensador automatizado capaz de suministrar comida en
+                    horarios programados y en cantidades controladas, manteniendo la
+                    intervención humana para configurar, revisar y abastecer el sistema.
                 </p>
             </div>
 
@@ -431,8 +465,8 @@
             <div class="card">
                 <h3>Alimentación programada</h3>
                 <p>
-                    Permite establecer horarios automáticos para alimentar a la mascota
-                    aunque el dueño no esté en casa.
+                    Permite establecer horarios automatizados para apoyar la alimentación
+                    de la mascota cuando el dueño no puede hacerlo en el momento exacto.
                 </p>
             </div>
 
@@ -509,10 +543,11 @@
     <section class="costos" id="costos">
         <div class="section-title">
             <span>Costos</span>
-            <h2>Presupuesto estimado</h2>
+            <h2>Costos reales del prototipo</h2>
             <p>
-                Los costos pueden variar según la tienda y los materiales disponibles.
-                Esta tabla muestra una estimación básica para construir un prototipo.
+                Para la elaboración del prototipo del dispensador automatizado de
+                alimentos con Arduino, se utilizaron materiales para la estructura física,
+                el sistema mecánico y el sistema electrónico.
             </p>
         </div>
 
@@ -520,54 +555,167 @@
             <thead>
                 <tr>
                     <th>Material</th>
-                    <th>Uso</th>
-                    <th>Costo estimado</th>
+                    <th>Categoría</th>
+                    <th>Costo real</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Microcontrolador Arduino</td>
-                    <td>Control del sistema</td>
-                    <td>$180 - $250 MXN</td>
+                    <td>Madera para la estructura del prototipo</td>
+                    <td>Estructura física</td>
+                    <td>$550 MXN</td>
                 </tr>
                 <tr>
-                    <td>Servomotor o motor DC</td>
-                    <td>Liberar el alimento</td>
-                    <td>$80 - $150 MXN</td>
+                    <td>Tornillos para madera</td>
+                    <td>Estructura física</td>
+                    <td>$39 MXN</td>
                 </tr>
                 <tr>
-                    <td>Sensor ultrasónico o infrarrojo</td>
-                    <td>Detectar alimento o presencia</td>
-                    <td>$60 - $120 MXN</td>
+                    <td>Bisagras</td>
+                    <td>Estructura física</td>
+                    <td>$20 MXN</td>
                 </tr>
                 <tr>
-                    <td>Recipiente o depósito</td>
-                    <td>Almacenar comida</td>
-                    <td>$80 - $180 MXN</td>
+                    <td>Pintura acrílica</td>
+                    <td>Acabado</td>
+                    <td>$130 MXN</td>
                 </tr>
                 <tr>
-                    <td>Cables, resistencias y protoboard</td>
-                    <td>Conexiones eléctricas</td>
-                    <td>$100 - $180 MXN</td>
+                    <td>Sellador acrílico en aerosol</td>
+                    <td>Acabado</td>
+                    <td>$95 MXN</td>
                 </tr>
                 <tr>
-                    <td>Fuente de alimentación</td>
-                    <td>Energía para el circuito</td>
-                    <td>$100 - $200 MXN</td>
+                    <td>Pinceles y brocha</td>
+                    <td>Herramientas</td>
+                    <td>$40 MXN</td>
+                </tr>
+                <tr>
+                    <td>Motorreductor Tipo Pololu 3 RPM 12V Motor DC Robot Sumo Gusa</td>
+                    <td>Sistema mecánico</td>
+                    <td>$300 MXN</td>
+                </tr>
+                <tr>
+                    <td>Barra eje metálico</td>
+                    <td>Sistema mecánico</td>
+                    <td>$35 MXN</td>
+                </tr>
+                <tr>
+                    <td>Acoplamiento de brida eje guía de motor</td>
+                    <td>Sistema mecánico</td>
+                    <td>$78 MXN</td>
+                </tr>
+                <tr>
+                    <td>Arduino UNO</td>
+                    <td>Sistema electrónico</td>
+                    <td>$150 MXN</td>
+                </tr>
+                <tr>
+                    <td>Pantalla LCD 16x2</td>
+                    <td>Sistema electrónico</td>
+                    <td>$65 MXN</td>
+                </tr>
+                <tr>
+                    <td>Módulo relay</td>
+                    <td>Sistema electrónico</td>
+                    <td>$59 MXN</td>
+                </tr>
+                <tr>
+                    <td>Fuente de alimentación 12V</td>
+                    <td>Sistema electrónico</td>
+                    <td>$125 MXN</td>
+                </tr>
+                <tr>
+                    <td>Protoboard</td>
+                    <td>Sistema electrónico</td>
+                    <td>$100 MXN</td>
+                </tr>
+                <tr>
+                    <td>Cables jumper macho macho, macho hembra y hembra hembra</td>
+                    <td>Sistema electrónico</td>
+                    <td>$200 MXN</td>
+                </tr>
+                <tr>
+                    <td>4 botones push buttons</td>
+                    <td>Sistema electrónico</td>
+                    <td>$20 MXN</td>
+                </tr>
+                <tr>
+                    <td>1 sensor infrarrojo IR</td>
+                    <td>Sistema electrónico</td>
+                    <td>$94 MXN</td>
+                </tr>
+                <tr>
+                    <td>10 resistencias</td>
+                    <td>Sistema electrónico</td>
+                    <td>$50 MXN</td>
+                </tr>
+                <tr>
+                    <td>Placa de expansión</td>
+                    <td>Sistema electrónico</td>
+                    <td>$138 MXN</td>
+                </tr>
+                <tr>
+                    <td>Rollo de cable AWG</td>
+                    <td>Sistema electrónico</td>
+                    <td>$150 MXN</td>
+                </tr>
+                <tr>
+                    <td>Diodo LED</td>
+                    <td>Sistema electrónico</td>
+                    <td>$56 MXN</td>
+                </tr>
+                <tr>
+                    <td>Estaño</td>
+                    <td>Herramientas</td>
+                    <td>$100 MXN</td>
+                </tr>
+                <tr>
+                    <td>Cinta aislante</td>
+                    <td>Herramientas</td>
+                    <td>$11 MXN</td>
+                </tr>
+                <tr>
+                    <td>Cinchos</td>
+                    <td>Herramientas</td>
+                    <td>$29 MXN</td>
+                </tr>
+                <tr>
+                    <td>Lijas</td>
+                    <td>Herramientas</td>
+                    <td>$20 MXN</td>
                 </tr>
                 <tr class="total-row">
-                    <td>Total aproximado</td>
-                    <td>Prototipo básico</td>
-                    <td>$600 - $1,080 MXN</td>
+                    <td>Total de materiales y herramientas</td>
+                    <td>Inversión del prototipo</td>
+                    <td>$2,654 MXN</td>
                 </tr>
             </tbody>
         </table>
 
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Precio de menudeo</h3>
+                <p>Venta individual con margen de ganancia del 40% al 50%.</p>
+                <strong>$2,800 - $3,000 MXN</strong>
+                <p>Ganancia aproximada por unidad: $800 - $1,000 MXN.</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Precio de mayoreo</h3>
+                <p>Venta por volumen aplicando descuento en compras de 10 piezas o más.</p>
+                <strong>$2,300 - $2,500 MXN</strong>
+                <p>Ganancia aproximada por unidad: $300 - $500 MXN.</p>
+            </div>
+        </div>
+
         <div class="highlight">
-            <h3>Recomendación</h3>
+            <h3>Inversión del prototipo</h3>
             <p>
-                Para reducir costos, se pueden reutilizar recipientes plásticos, cables y
-                fuentes de alimentación de proyectos anteriores.
+                El costo total de los materiales y herramientas utilizados para la
+                construcción de FREED TIME asciende a $2,654 MXN, inversión necesaria
+                para el desarrollo del dispensador automatizado de alimentos basado en
+                Arduino.
             </p>
         </div>
     </section>
@@ -577,22 +725,23 @@
             <span>Conclusión</span>
             <h2>Importancia del proyecto</h2>
             <p>
-                El dispensador automático para mascotas demuestra cómo la tecnología puede
-                resolver problemas cotidianos de manera sencilla y útil. Además de facilitar
-                la vida de los dueños, contribuye al bienestar de las mascotas al mantener
-                una alimentación más constante y controlada.
+                FREED TIME demuestra cómo la tecnología puede resolver problemas
+                cotidianos de manera sencilla y útil. Como proyecto para InnovaTecNM,
+                integra programación, electrónica y diseño físico para apoyar la
+                alimentación de las mascotas de forma automatizada y supervisada.
             </p>
         </div>
 
         <p class="texto-amplio">
-            Este proyecto también permite aplicar conocimientos de electrónica,
-            programación, diseño y solución de problemas, convirtiéndose en una propuesta
-            práctica para aprender y mejorar el cuidado animal.
+            Este proyecto no sustituye la responsabilidad del dueño; la complementa.
+            Requiere abastecimiento, configuración y revisión constante, por lo que su
+            valor principal está en organizar mejor los horarios de alimentación y
+            promover un cuidado animal más práctico y consciente.
         </p>
     </section>
 
     <footer>
-        <p>Proyecto escolar | Dispensador Automático para Mascotas</p>
+        <p>FREED TIME | Proyecto para InnovaTecNM | Dispensador automatizado para mascotas</p>
     </footer>
 
     <script>
